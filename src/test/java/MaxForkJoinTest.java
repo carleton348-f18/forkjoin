@@ -58,7 +58,7 @@ public class MaxForkJoinTest {
         System.out.println("Parallel time = " + parallelTime);
         double speedup = ((double)seqTime)/parallelTime;
         System.out.println("Speedup = " + speedup);
-        assertEquals(parallelMax, seqMax, 1e-9);
+        assertEquals(seqMax, parallelMax, 1e-9);
 
         if (InetAddress.getLocalHost().getHostName().startsWith("cmc")) {
             System.out.println("Running speedup test");

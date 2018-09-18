@@ -54,7 +54,7 @@ public class SumForkJoinTest {
         System.out.println("Parallel time = " + parallelTime);
         double speedup = ((double)seqTime)/parallelTime;
         System.out.println("Speedup = " + speedup);
-        assertEquals(parallelSum, seqSum, 1);
+        assertEquals(seqSum, parallelSum, 1);
 
         if (InetAddress.getLocalHost().getHostName().startsWith("cmc")) {
             System.out.println("Running speedup test");
